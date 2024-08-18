@@ -7,7 +7,7 @@ vehicles_data = pd.read_csv("vehicles_us.csv")
 vehicles_data[["manufacturer","modelo"]] = vehicles_data["model"].str.split(n=1, expand= True)
 
 st.title("Autos anunciados a venta en USA")
-st.write("Se nos ha proporcionado una tabla con la informacion de autos que fueron anunciados a venta en USA ")
+st.write("Se nos ha proporcionado una tabla con la informacion de autos que fueron anunciados a venta en USA.")
 st.write("En esta sencilla app web te mostraremos graficos creados a partir de estos datos.")
 
 st.header("Menu de seleccion")
@@ -52,7 +52,7 @@ if bar_button:
     st.write("Con este grafico de barras dinamico podemos filtrar por el tipo de vehiculo, de este modo tambien sabemos cuantos vehiculos de cada tipo fueron anunciados.")
 
 # Crea una check box que construya un grafico de dispercion
-scatter_button = st.checkbox("Construye un grafico de dispercion para el precio")
+scatter_button = st.checkbox("Construye un grafico de dispersion para el precio")
 
 if scatter_button:
     st.write("Selecciona los fabricantes que deseas comparar")
@@ -70,8 +70,8 @@ if scatter_button:
             labels = {"manufacturer":"Fabricante" , "price":"Precio en dolares"}
             )
     st.plotly_chart(price_dispersion, use_container_width=True)
-    st.write("Con este grafico de dispercion podemos comparar la distribucion del precio de los vehiculos anunciados de dos fabricantes.")
+    st.write("Con este grafico de dispersion podemos comparar la distribucion del precio de los vehiculos anunciados de dos fabricantes.")
 
 
-st.write("Con estos graficos puedes comparar, filtrar y encontrar relaciones entre los distintos fabricantes de autos.")        
+st.write("Con estos graficos puedes filtrar, comparar y encontrar relaciones entre los distintos fabricantes de autos.")        
 st.write("Creador Gilberto Loza.")
