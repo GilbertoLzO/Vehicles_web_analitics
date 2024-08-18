@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 # Leer los datos
-vehicles_data = pd.read_csv(r"D:\app_web_proyect\proyecto_6_tripleten\Vehicles_web_analitics\vehicles_us.csv")
+vehicles_data = pd.read_csv("vehicles_us.csv")
 vehicles_data[["manufacturer","modelo"]] = vehicles_data["model"].str.split(n=1, expand= True)
 
 st.title("Autos anunciados a venta en USA")
